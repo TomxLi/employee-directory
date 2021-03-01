@@ -15,4 +15,5 @@ An employee or manager would benefit greatly from being able to view non-sensiti
 
 <h1>Github Pages Link:</h1>
 https://https://tomxli.github.io/employee-directory/
+
 ![Screenshot](./employee-directory-app/public/Capture.PNG)
