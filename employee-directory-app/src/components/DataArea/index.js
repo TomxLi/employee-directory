@@ -76,8 +76,10 @@ export default class DataArea extends Component {
     const filter = event.target.value;
     const filteredList = this.state.users.filter((item) => {
       // merge data together, then see if user input is anywhere inside
-      let values = Object.values(item).join("").toLowerCase();
-      return values.indexOf(filter.toLowerCase()) !== -1;
+      let first = item.name.first.toLowerCase();
+      let last =  item.name.last.toLowerCase();
+      let input = filter.toLowerCase();
+      return first.includes(input) || last.includes(input);
     });
     this.setState({ filteredUsers: filteredList });
   };
