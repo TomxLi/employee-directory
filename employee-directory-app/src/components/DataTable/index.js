@@ -12,7 +12,6 @@ function DataTable({ headings, users, handleSort }) {
           <tr>
             {headings.map(({ name, width }) => {
               if (name === "Name") {
-                console.log(name);
                 return (
                   <th
                     className="col"
@@ -24,7 +23,7 @@ function DataTable({ headings, users, handleSort }) {
                   >
                     {name}
                     <span className="pointer" />
-                    <b></b> <i class="fa fa-fw fa-sort"></i>
+                    <b></b> <i className="fa fa-fw fa-sort"></i>
                     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"></link>
                   </th>
                 );
