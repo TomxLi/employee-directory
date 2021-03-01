@@ -19,6 +19,7 @@ export default class DataArea extends Component {
   ];
 
   handleSort = (heading) => {
+    console.log(heading);
     if (this.state.order === "descend") {
       this.setState({
         order: "ascend",
@@ -39,7 +40,15 @@ export default class DataArea extends Component {
         }
         // numerically
         else if (heading === "name") {
-          return a[heading].first.localeCompare(b[heading].first);
+          const aFirtName = a[heading].first.toLowerCase();
+          const aLastName = a[heading].last.toLowerCase();
+          const bFirstName = b[heading].first.toLowerCase();
+          const bLastName = b[heading].last.toLowerCase();
+          //break tie when first name is same
+          if (aFirtName.localeCompare(bFirstName) === 0) {
+            return aLastName.localeCompare(bLastName);
+          }
+          return aFirtName.localeCompare(bFirstName);
         } else {
           return a[heading] - b[heading];
         }
@@ -52,7 +61,15 @@ export default class DataArea extends Component {
         }
         // numerically
         else if (heading === "name") {
-          return b[heading].first.localeCompare(a[heading].first);
+          const aFirstName = a[heading].first.toLowerCase();
+          const aLastName = a[heading].last.toLowerCase();
+          const bFirstName = b[heading].first.toLowerCase();
+          const bLastName = b[heading].last.toLowerCase();
+          //break tie when first name is same
+          if (aFirstName.localeCompare(bFirstName) === 0) {
+            return bLastName.localeCompare(aLastName);
+          }
+          return bFirstName.localeCompare(aFirstName);
         } else {
           return b[heading] - a[heading];
         }
