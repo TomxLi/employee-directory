@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import DataTable from "../DataTable";
 import SearchArea from "../SearchArea";
 import API from "../../utils/API";
+import "./style.css";
 
 export default class DataArea extends Component {
   state = {
@@ -19,7 +20,6 @@ export default class DataArea extends Component {
   ];
 
   handleSort = (heading) => {
-    console.log(heading);
     if (this.state.order === "descend") {
       this.setState({
         order: "ascend",

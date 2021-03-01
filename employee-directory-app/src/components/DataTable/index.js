@@ -11,19 +11,38 @@ function DataTable({ headings, users, handleSort }) {
         <thead>
           <tr>
             {headings.map(({ name, width }) => {
-              return (
-                <th
-                  className="col"
-                  key={name}
-                  style={{ width }}
-                  onClick={() => {
-                    handleSort(name.toLowerCase());
-                  }}
-                >
-                  {name}
-                  <span className="pointer" />
-                </th>
-              );
+              if (name === "Name" || name === "Phone") {
+                console.log(name);
+                return (
+                  <th
+                    className="col"
+                    key={name}
+                    style={{ width }}
+                    onClick={() => {
+                      handleSort(name.toLowerCase());
+                    }}
+                  >
+                    {name}
+                    <span className="pointer" />
+                    <b></b> <i class="fa fa-fw fa-sort"></i>
+                    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"></link>
+                  </th>
+                );
+              } else {
+                return (
+                  <th
+                    className="col"
+                    key={name}
+                    style={{ width }}
+                    onClick={() => {
+                      handleSort(name.toLowerCase());
+                    }}
+                  >
+                    {name}
+                    <span className="pointer" />
+                  </th>
+                );
+              }
             })}
           </tr>
         </thead>
