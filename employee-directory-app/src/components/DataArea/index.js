@@ -38,20 +38,16 @@ export default class DataArea extends Component {
         } else if (b[heading] === undefined) {
           return -1;
         }
-        // numerically
-        else if (heading === "name") {
-          const aFirtName = a[heading].first.toLowerCase();
-          const aLastName = a[heading].last.toLowerCase();
-          const bFirstName = b[heading].first.toLowerCase();
-          const bLastName = b[heading].last.toLowerCase();
-          //break tie when first name is same
-          if (aFirtName.localeCompare(bFirstName) === 0) {
-            return aLastName.localeCompare(bLastName);
-          }
-          return aFirtName.localeCompare(bFirstName);
-        } else {
-          return a[heading] - b[heading];
+        // sort by first name then last name      
+        const aFirtName = a[heading].first.toLowerCase();
+        const aLastName = a[heading].last.toLowerCase();
+        const bFirstName = b[heading].first.toLowerCase();
+        const bLastName = b[heading].last.toLowerCase();
+        //break tie when first name is same
+        if (aFirtName.localeCompare(bFirstName) === 0) {
+          return aLastName.localeCompare(bLastName);
         }
+        return aFirtName.localeCompare(bFirstName);
       } else {
         // account for missing values
         if (a[heading] === undefined) {
@@ -59,20 +55,16 @@ export default class DataArea extends Component {
         } else if (b[heading] === undefined) {
           return -1;
         }
-        // numerically
-        else if (heading === "name") {
-          const aFirstName = a[heading].first.toLowerCase();
-          const aLastName = a[heading].last.toLowerCase();
-          const bFirstName = b[heading].first.toLowerCase();
-          const bLastName = b[heading].last.toLowerCase();
-          //break tie when first name is same
-          if (aFirstName.localeCompare(bFirstName) === 0) {
-            return bLastName.localeCompare(aLastName);
-          }
-          return bFirstName.localeCompare(aFirstName);
-        } else {
-          return b[heading] - a[heading];
+        // sort by first name then last name
+        const aFirstName = a[heading].first.toLowerCase();
+        const aLastName = a[heading].last.toLowerCase();
+        const bFirstName = b[heading].first.toLowerCase();
+        const bLastName = b[heading].last.toLowerCase();
+        //break tie when first name is same
+        if (aFirstName.localeCompare(bFirstName) === 0) {
+          return bLastName.localeCompare(aLastName);
         }
+        return bFirstName.localeCompare(aFirstName);
       }
     };
     const sortedUsers = this.state.filteredUsers.sort(compareFnc);

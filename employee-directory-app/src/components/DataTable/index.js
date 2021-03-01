@@ -11,7 +11,7 @@ function DataTable({ headings, users, handleSort }) {
         <thead>
           <tr>
             {headings.map(({ name, width }) => {
-              if (name === "Name" || name === "Phone") {
+              if (name === "Name") {
                 console.log(name);
                 return (
                   <th
@@ -34,9 +34,6 @@ function DataTable({ headings, users, handleSort }) {
                     className="col"
                     key={name}
                     style={{ width }}
-                    onClick={() => {
-                      handleSort(name.toLowerCase());
-                    }}
                   >
                     {name}
                     <span className="pointer" />
