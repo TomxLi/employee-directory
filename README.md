@@ -1,6 +1,4 @@
-## Overview
-
-For this assignment, you'll create a employee directory with React. This assignment will require you to break up your application's UI into components, manage component state, and respond to user events.
+# [Employee-Directory](https://https://tomxli.github.io/employee-directory//)
 
 ## User Story
 
@@ -8,6 +6,13 @@ For this assignment, you'll create a employee directory with React. This assignm
 
 ## Business Context
 
-An employee or manager would benefit greatly from being able to view non-sensitive data about other employees. It would be particularly helpful to be able to filter employees by name.
+An employee or manager would benefit greatly from being able to view non-sensitive data about other employees. It would be particularly helpful to be able to filter employees by name or sort by name order.
 
+<h1>Tech Stack:</h1>
+<li>React Documentation - (https://reactjs.org/docs/getting-started.html)</li>
+<li>Random User Generator API - (https://randomuser.me/documentation)</li>
+<li>Bootstrap - (https://getbootstrap.com/docs/4.4/getting-started/introduction/)</li>## App Link
+<h1>Github Pages Link:</h1>
+
+https://https://tomxli.github.io/employee-directory/
 ![Screenshot](./employee-directory-app/public/Capture.PNG)
