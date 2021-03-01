@@ -1,4 +1,4 @@
-# [Employee-Directory](https://https://tomxli.github.io/employee-directory//)
+# [Employee-Directory](https://tomxli.github.io/employee-directory//)
 
 <h1>User Story</h1>
 
