@@ -1,5 +1,5 @@
 import React from "react";
-import DataRow from "../DataRow/DataRow";
+import DataRow from "../DataRow";
 
 function DataTable({ headings, users, handleSort }) {
   return (

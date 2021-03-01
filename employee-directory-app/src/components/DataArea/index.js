@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import DataTable from "../DataTable/DataTable";
-import SearchArea from "../SearchArea/SearchArea";
+import DataTable from "../DataTable";
+import SearchArea from "../SearchArea";
 import API from "../../utils/API";
 
 export default class DataArea extends Component {
