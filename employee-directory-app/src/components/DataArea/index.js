@@ -78,9 +78,10 @@ export default class DataArea extends Component {
       // merge data together, then see if user input is anywhere inside
       let first = item.name.first.toLowerCase();
       let last =  item.name.last.toLowerCase();
+      let name = first + " " + last;
       let input = filter.toLowerCase();
       console.log("search by " + input);
-      return first.includes(input) || last.includes(input);
+      return name.includes(input);
     });
     this.setState({ filteredUsers: filteredList });
   };
