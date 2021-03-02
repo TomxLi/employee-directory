@@ -80,7 +80,6 @@ export default class DataArea extends Component {
       let last =  item.name.last.toLowerCase();
       let name = first + " " + last;
       let input = filter.toLowerCase();
-      console.log("search by " + input);
       return name.includes(input);
     });
     this.setState({ filteredUsers: filteredList });
